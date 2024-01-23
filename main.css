@@ -1,11 +1,10 @@
 @font-face {
     font-family: 'Avara_Bold';
-    src: url('Bold/Avara-Bold.eot');
-    src: url('Bold/Avara-Bold.eot?#iefix') format('embedded-opentype'),
-        url('Bold/Avara-Bold.woff') format('woff'),
-        url('Bold/Avara-Bold.woff2') format('woff2'),
-        url('Bold/Avara-Bold.ttf') format('truetype'),
-        url('Bold/Avara-Bold.svg#svgFontName') format('svg');
+    src: url('webfonts/Bold/Avara-Bold.eot');
+    src: url('webfonts/Bold/Avara-Bold.eot?#iefix') format('embedded-opentype'),
+        url('webfonts/Bold/Avara-Bold.woff') format('woff'),
+        url('webfonts/Bold/Avara-Bold.woff2') format('woff2'),
+        url('webfonts/Bold/Avara-Bold.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -33,7 +32,11 @@
 }
 
 body {
-    font-family: 'Noto Sans';
+    font-family: 'Avara_Bold', sans-serif;
+}
+
+main {
+    margin: 0 3vw 3vw 3vw;
 }
 
 .exhibition-title h1 {
@@ -48,19 +51,25 @@ body {
     max-height: 5em;
 }
 
+.menu-home img {
+    max-width: 60vw;
+    max-height: 5em;
+}
+
 h1 {
     font-family: 'Avara_Bold';
     font-size: 3em;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: black;
-    color: transparent;
+    text-transform: lowercase;
 }
 
 nav {
     display: flex;
     justify-content: space-between;
     text-transform: lowercase;
+}
 
+nav a:last-child {
+    text-align: right;
 }
 
 nav a,
@@ -89,12 +98,108 @@ nav a:hover,
     flex-direction: column;
 }
 
+.middle-icon {
+    pointer-events: none;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 6em;
+    width: 6em;
+    z-index: -5;
+}
+
+
+.line1 {
+    width: 5.8em;
+    height: 0.18em;
+    animation-duration: 10s;
+    background: transparent;
+    outline: 3px #000000 solid;
+    animation-name: morph1;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    rotate: 90deg;
+}
+
+.line2 {
+    background: black;
+    height: 0.21em;
+    width: 0.21em;
+    animation-duration: 10s;
+    animation-name: morph2;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    transform: scaleX(30);
+}
+
+@keyframes morph1 {
+
+    19% {
+        transform: rotate(90deg) translateY(20px);
+    }
+
+    51% {
+        transform: rotate(180deg);
+    }
+
+    71% {
+        transform: rotate(270deg) translateY(20px);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+
+}
+
+@keyframes morph2 {
+    0% {
+        transform: scaleX(30);
+    }
+
+    15% {
+        transform: scaleX(1);
+    }
+
+    22% {
+        transform: scaleX(30);
+    }
+
+    35% {
+        transform: scaleX(1);
+    }
+
+    48% {
+        transform: scaleY(30) scaleX(1);
+    }
+
+    52% {
+        transform: scaleY(30) scaleX(1);
+    }
+
+    65% {
+        transform: scaleX(1);
+    }
+
+    75% {
+        transform: scaleX(30);
+    }
+
+    85% {
+        transform: scaleX(1);
+    }
+
+    100% {
+        transform: scaleX(30);
+    }
+}
 
 
 .artists-row-names {
     display: flex;
     justify-content: center;
-    gap: 7em;
+    gap: 20vw;
     transition: 2s;
     text-transform: lowercase;
     background: none;
@@ -131,7 +236,8 @@ nav a:hover,
     z-index: -1;
 }
 
-.artists-row:hover .artists-row-names {
+.artists-row:hover .artists-row-names,
+.artists-row:active .artists-row-names {
     gap: 0em;
 }
 
@@ -141,11 +247,12 @@ nav a:hover,
     position: absolute;
     left: 0;
     top: 0;
-    width: 100%;
+    min-width: 100%;
     height: 100%;
     opacity: 0.6;
     background-repeat: no-repeat;
-    background-position: 50% 0;
+    background-position: center;
+    position: fixed;
     background-size: cover;
 }
 
@@ -167,4 +274,55 @@ nav a:hover,
 
 .anika-cindy-row:hover:before {
     background-image: url(images/placeholder5.jpg);
+}
+
+.curatorial-text {
+    columns: 2 auto;
+    column-gap: 2em;
+    max-width: 60em;
+}
+
+.curatorial-text p {
+    margin: 0 0 1em 0;
+}
+
+hr {
+    border-bottom: 2px solid black;
+}
+
+@media (hover: none) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+        border-bottom: 1px solid black;
+        padding-bottom: 1em;
+    }
+
+    nav a {
+        font-size: 1.5em;
+
+    }
+
+    .middle-icon {
+        display: none;
+    }
+
+    .artists-row .artists-row-names {
+        gap: 0em;
+    }
+
+    .artists-row .artists-subrow {
+        opacity: 1;
+        max-height: 1.5em;
+        margin-top: -0.6em;
+        pointer-events: none;
+    }
+
+    .artists-row .artists-row-names {
+        -webkit-text-stroke-width: 0.03em;
+        -webkit-text-stroke-color: black;
+        color: rgb(0, 0, 0, 0.7);
+        -webkit-text-fill-color: transparent;
+    }
+
 }
