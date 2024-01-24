@@ -76,19 +76,37 @@ nav a,
 .artists-list a {
     font-family: 'Avara_Black';
     font-size: 1.8rem;
-    color: black;
     text-decoration: none;
     transition: 0.5s;
-    -webkit-text-stroke-width: 0em;
-    -webkit-text-stroke-color: rgb(0, 0, 0, 0);
+    letter-spacing: 0.02em;
 }
 
-nav a:hover,
-.artists-row:hover .artists-row-names {
-    -webkit-text-stroke-width: 0.03em;
-    -webkit-text-stroke-color: black;
+nav a {
     color: rgb(0, 0, 0, 0.7);
     -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 0.03em;
+    -webkit-text-stroke-color: black;
+}
+
+.artists-list a {
+    color: black;
+    -webkit-text-stroke-width: 0em;
+    -webkit-text-stroke-color: rgb(0, 0, 0, 0);
+    -webkit-text-fill-color: black;
+}
+
+.artists-row:hover .artists-row-names {
+    color: rgb(0, 0, 0, 0.7);
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 0.03em;
+    -webkit-text-stroke-color: black;
+}
+
+nav a:hover {
+    color: black;
+    -webkit-text-stroke-width: 0em;
+    -webkit-text-stroke-color: rgb(0, 0, 0, 0);
+    -webkit-text-fill-color: black;
 }
 
 .artists-list {
