@@ -48,7 +48,8 @@ main {
 
 .exhibition-title img {
     max-width: 80vw;
-    max-height: 5em;
+    max-height: 3.8em;
+    margin-top: 0.6em;
 }
 
 .menu-home img {
@@ -93,13 +94,6 @@ nav a {
     -webkit-text-stroke-width: 0em;
     -webkit-text-stroke-color: rgb(0, 0, 0, 0);
     -webkit-text-fill-color: black;
-}
-
-.artists-row:hover .artists-row-names {
-    color: rgb(0, 0, 0, 0.7);
-    -webkit-text-fill-color: transparent;
-    -webkit-text-stroke-width: 0.03em;
-    -webkit-text-stroke-color: black;
 }
 
 nav a:hover {
@@ -229,6 +223,26 @@ nav a:hover {
     margin: 0;
 }
 
+.olivia-allison-row>*>p {
+    -webkit-text-fill-color: #6f746f;
+}
+
+.angela-jessica-row>*>p {
+    -webkit-text-fill-color: #478a91;
+}
+
+.fariha-nishat-row>*>p {
+    -webkit-text-fill-color: #705166;
+}
+
+.anya-jafrin-row>*>p {
+    -webkit-text-fill-color: #709a5d;
+}
+
+.anika-cindy-row>*>p {
+    -webkit-text-fill-color: #386c56;
+}
+
 .artists-subrow {
     opacity: 0;
     transition: 1s;
@@ -266,32 +280,39 @@ nav a:hover {
     left: 0;
     top: 0;
     min-width: 100%;
-    height: 100%;
-    opacity: 0.6;
+    min-height: 100%;
+    opacity: 0.45;
     background-repeat: no-repeat;
     background-position: center;
     position: fixed;
-    background-size: cover;
+    background-size: contain;
 }
 
 .olivia-allison-row:hover:before {
-    background-image: url(images/placeholder.jpg);
+    background-image: url(images/allisonolivia-1.png);
 }
 
 .angela-jessica-row:hover:before {
-    background-image: url(images/placeholder2.jpg);
+    background-image: url(images/angelajessica-1.png);
 }
 
 .fariha-nishat-row:hover:before {
-    background-image: url(images/placeholder3.jpg);
+    background-image: url(images/farihanishat-1.jpg);
 }
 
 .anya-jafrin-row:hover:before {
-    background-image: url(images/placeholder4.jpg);
+    background-image: url(images/anyajafrin-1.JPG);
 }
 
 .anika-cindy-row:hover:before {
-    background-image: url(images/placeholder5.jpg);
+    background-image: url(images/anikacindy-1.png);
+}
+
+.artists-row:hover .artists-row-names p {
+    color: rgb(0, 0, 0, 0.7);
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 0.03em;
+    -webkit-text-stroke-color: black;
 }
 
 .curatorial-text {
