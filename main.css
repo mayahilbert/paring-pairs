@@ -32,7 +32,7 @@
 }
 
 body {
-    font-family: 'Avara_Bold', sans-serif;
+    font-family: 'Proza Libre', sans-serif;
 }
 
 main {
@@ -55,6 +55,10 @@ main {
 .menu-home img {
     max-width: 60vw;
     max-height: 5em;
+}
+
+p {
+    font-size: 1.4rem;
 }
 
 h1 {
@@ -218,28 +222,28 @@ nav a:hover {
     flex-wrap: wrap;
 }
 
-.artists-row>*>p {
+.artists-row>*>span {
     transition: 2s;
     margin: 0;
 }
 
-.olivia-allison-row>*>p {
+.olivia-allison-row>*>span {
     -webkit-text-fill-color: #81916e;
 }
 
-.angela-jessica-row>*>p {
+.angela-jessica-row>*>span {
     -webkit-text-fill-color: #478a91;
 }
 
-.fariha-nishat-row>*>p {
+.fariha-nishat-row>*>span {
     -webkit-text-fill-color: #705166;
 }
 
-.anya-jafrin-row>*>p {
+.anya-jafrin-row>*>span {
     -webkit-text-fill-color: #78a85e;
 }
 
-.anika-cindy-row>*>p {
+.anika-cindy-row>*>span {
     -webkit-text-fill-color: #386c56;
 }
 
@@ -308,7 +312,7 @@ nav a:hover {
     background-image: url(images/anikacindy-1.png);
 }
 
-.artists-row:hover .artists-row-names p {
+.artists-row:hover .artists-row-names span {
     color: rgb(0, 0, 0, 0.7);
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke-width: 0.03em;
@@ -326,7 +330,8 @@ nav a:hover {
 }
 
 hr {
-    border-bottom: 2px solid black;
+    border-bottom: 1px #000000 solid;
+    margin: 2em 0;
 }
 
 @media (hover: none) {
@@ -338,7 +343,7 @@ hr {
     }
 
     nav a {
-        font-size: 1.5em;
+        font-size: 1.5rem;
 
     }
 
