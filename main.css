@@ -35,6 +35,7 @@ body {
     font-family: 'Proza Libre', sans-serif;
 }
 
+
 main {
     margin: 0 3vw 3vw 3vw;
 }
@@ -253,10 +254,11 @@ nav a:hover {
     text-align: center;
     max-height: 0px;
     font-family: 'Avara_Bold Italic';
+    margin-top: -0.16em;
 }
 
 .artists-row {
-    margin: 0.03em;
+    margin: 0.02em;
 }
 
 .artists-row:hover .artists-subrow {
