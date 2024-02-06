@@ -230,23 +230,31 @@ nav a:hover {
 }
 
 .olivia-allison-row>*>span {
-    -webkit-text-fill-color: #81916e;
+    /*-webkit-text-fill-color: #81916e;*/
+    -webkit-text-fill-color: #8c8d94;
+    color: #8c8d94;
 }
 
 .angela-jessica-row>*>span {
-    -webkit-text-fill-color: #478a91;
+    /*-webkit-text-fill-color: #478a91;*/
+    -webkit-text-fill-color: #8789bf;
+    color: #8789bf;
 }
 
 .fariha-nishat-row>*>span {
-    -webkit-text-fill-color: #909149;
+    /*-webkit-text-fill-color: #909149;*/
+    -webkit-text-fill-color: #755a7f;
+    color: #755a7f;
 }
 
 .anya-jafrin-row>*>span {
     -webkit-text-fill-color: #78a85e;
+    color: #78a85e;
 }
 
 .anika-cindy-row>*>span {
     -webkit-text-fill-color: #386c56;
+    color: #386c56;
 }
 
 .artists-subrow {
