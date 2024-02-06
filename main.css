@@ -41,6 +41,16 @@ main {
     margin: 0 3vw 3vw 3vw;
 }
 
+.project-header>h1,
+.project-header>h2,
+.project-header>h3 {
+    margin: 0;
+}
+
+.project-header {
+    margin: 2em 0 3em 0;
+}
+
 .exhibition-title h1 {
     width: 100%;
     display: flex;
