@@ -77,7 +77,7 @@ p {
 h1 {
     font-family: 'Avara_Bold';
     font-size: 3em;
-    text-transform: lowercase;
+    /*text-transform: lowercase;*/
 }
 
 nav {
@@ -275,7 +275,7 @@ nav a:hover {
     max-height: 0px;
     font-family: 'Avara_Bold Italic';
     margin-top: -0.16em;
-    text-transform: lowercase;
+    /*text-transform: lowercase;*/
 }
 
 .artists-row {
@@ -354,8 +354,13 @@ nav a:hover {
     }
 }
 
-.body-text p {
-    margin: 0 0 1em 0;
+.body-text p:not(:last-child),
+.body-text p:first-child {
+    margin: 0 0 1.4rem 0;
+}
+
+.body-text p:last-child:not(:first-child) {
+    margin: 0;
 }
 
 hr {
@@ -404,7 +409,7 @@ hr {
 .vid-container {
     padding: 56.3% 0 0 0;
     position: relative;
-    margin-bottom: 4em;
+    margin-bottom: 3em;
 }
 
 .vid-container iframe {
@@ -416,7 +421,7 @@ hr {
 }
 
 .playbutton {
-    margin-top: -34.3%;
+    margin-top: -40%;
     z-index: 100;
     position: absolute;
     display: flex;
@@ -426,19 +431,23 @@ hr {
 }
 
 .playbutton-icon {
-    width: 0;
-    height: 0;
-    border-style: solid;
+    width: 20%;
     opacity: 1;
     transition: 0.6s;
     cursor: pointer;
-    border-width: 6vw 0 6vw 14vw;
-    border-color: transparent transparent transparent black;
 }
 
-.playbutton-icon:hover {
-    border-width: 5.5vw 0 5.5vw 13vw;
-    border-color: transparent transparent transparent white;
+.playbutton-icon svg path {
+    fill: transparent;
+    stroke: #fff;
+    stroke-miterlimit: 10;
+    stroke-width: 5px;
+    transition: 0.6s;
+}
+
+.playbutton-icon:hover svg path {
+    fill: #fff;
+
 }
 
 .hide {
@@ -448,4 +457,62 @@ hr {
 
 .show {
     opacity: 1;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3em;
+}
+
+.image-container h4 {
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.image-inner-container {
+    gap: 6em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.image-group {
+    gap: 4em;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.image-container img {
+    object-fit: contain;
+    height: auto;
+    width: auto;
+}
+
+.image-group img:nth-child(odd) {
+    margin-left: 35%;
+    max-height: 160vh;
+
+}
+
+.image-group img:nth-child(even) {
+    margin-left: -35%;
+    max-height: 140vh;
+
+}
+
+.image-overlay {
+    position: absolute;
+    text-align: center;
+    background-color: rgb(0, 0, 0, 0.6);
+    border: 2px solid white;
+    color: white;
+    padding: 1em 2em;
+}
+
+.changing-perspectives-image img {
+    max-width: 100%;
 }
